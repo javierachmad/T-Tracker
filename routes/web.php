@@ -8,3 +8,4 @@ Route::match(['get', 'post'], '/dashboard', [PageController::class, 'dashboard']
 Route::get('/pengelolaan', [PageController::class, 'pengelolaan'])->name('pengelolaan');
 Route::get('/profile', [PageController::class, 'profile'])->name('profile');
 Route::post('/tambah-matkul', [PageController::class, 'tambahMatkul'])->name('tambahMatkul');
+Route::post('/hapus-matkul', [PageController::class, 'hapusMatkul'])->name('hapusMatkul');

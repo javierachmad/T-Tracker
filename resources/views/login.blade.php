@@ -146,10 +146,6 @@
                 <label class="label">Password</label>
                 <div class="input-wrapper">
                     <input type="password" id="passwordInput" name="password" class="input-field" placeholder="Masukkan Password" required>
-                    <!-- Icon Mata -->
-                    <span class="toggle-password" onclick="togglePasswordVisibility()">
-                        👁️
-                    </span>
                 </div>
             </div>
             <!-- Tombol Masuk -->

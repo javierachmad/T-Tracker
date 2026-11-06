@@ -28,13 +28,13 @@
 </head>
 <body>
 
-    @include('components.navbar')
+    <x-navbar :username="$username ?? 'Guest'" />
 
     <div class="main-content">
         @yield('content')
     </div>
 
-    @include('components.footer')
+    <x-footer />
 
 </body>
 </html>

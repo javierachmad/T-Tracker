@@ -1,18 +1,18 @@
 @extends('layouts.app')
 
 @section('content')
-<!-- Import Font 'Plus Jakarta Sans' -->
+
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
 
 <div style="font-family: 'Plus Jakarta Sans', sans-serif;">
     <div style="margin-bottom: 25px;">
-        <h2 style="margin: 0 0 5px 0; font-size: 26px; color: #2563eb; font-weight: 800;">Tambah MatKul</h2>
+        <h2 style="margin: 0 0 5px 0; font-size: 26px; color: rgb(65, 122, 230); font-weight: 800;">Tambah MatKul</h2>
         <p style="margin: 0; color: #64748b; font-size: 14px;">Isi formulir di bawah ini untuk menambahkan kartu mata kuliah baru ke halaman Dashboard.</p>
     </div>
 
     <!-- Form Tambah Mata Kuliah -->
-    <div style="background: white; padding: 30px; border-radius: 20px; margin-bottom: 30px; border: 1.5px solid #93c5fd; box-shadow: 0 10px 25px rgba(59, 130, 246, 0.08);">
-        <h4 style="margin: 0 0 20px 0; color: #2563eb; font-size: 18px; font-weight: 700;">📚 Form Tambah Mata Kuliah</h4>
+    <div style="background: white; padding: 30px; border-radius: 20px; margin-bottom: 30px; box-shadow: 0 10px 25px rgba(59, 130, 246, 0.08);">
+        <h4 style="margin: 0 0 20px 0; color: rgb(65, 122, 230); font-size: 18px; font-weight: 700;">Form Tambah Mata Kuliah</h4>
         
         <form action="{{ route('tambahMatkul') }}" method="POST">
             @csrf

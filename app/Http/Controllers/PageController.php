@@ -71,4 +71,25 @@ class PageController extends Controller
             'profil' => $data_profil
         ]);
     }
+
+    public function hapusMatkul(Request $request) {
+        $username = $request->input('username', 'Guest');
+        $index = $request->input('index'); // Menangkap urutan/index array matkul yang akan dihapus
+        
+        $courses = session('courses', []);
+
+        // Jika data pada index tersebut ada, hapus datanya
+        if (isset($courses[$index])) {
+            unset($courses[$index]);
+            
+            // Susun ulang urutan index array agar tidak error (0, 1, 2, dst)
+            $courses = array_values($courses);
+            
+            // Simpan kembali array yang sudah diupdate ke session
+            session(['courses' => $courses]);
+        }
+
+        // Kembalikan ke halaman Dashboard
+        return redirect()->route('dashboard', ['username' => $username]);
+    }
 }
